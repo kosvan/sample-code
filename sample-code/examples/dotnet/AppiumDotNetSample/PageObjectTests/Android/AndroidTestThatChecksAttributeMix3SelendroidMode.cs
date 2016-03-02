@@ -8,9 +8,6 @@ using OpenQA.Selenium.Appium.PageObjects;
 using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Appium.Samples.PageObjectTests.Android
 {
@@ -33,7 +30,7 @@ namespace Appium.Samples.PageObjectTests.Android
                 capabilities.SetCapability("name", "android - complex");
                 capabilities.SetCapability("tags", new string[] { "sample" });
             }
-            Uri serverUri = Env.isSauce() ? AppiumServers.sauceURI : AppiumServers.localURI;
+            Uri serverUri = Env.isSauce() ? AppiumServers.sauceURI : AppiumServers.LocalServiceURIAndroid;
             driver = new AndroidDriver<AppiumWebElement>(serverUri, capabilities, Env.INIT_TIMEOUT_SEC);
             TimeOutDuration timeSpan = new TimeOutDuration(new TimeSpan(0, 0, 0, 5, 0));
             pageObject = new AndroidPageObjectChecksSelendroidModeOnNativeApp();
