@@ -35,62 +35,37 @@ import ru.ufs.screens.*;
 
 public class MainScreenTests extends TestBaseStatic  {
 	
-	
 	Screen mainScreen = new Screen(driver);
 	
     @Test
     public void test1 () throws Exception 
     {  	   
-    	
+    		
     }
     
-    @Test
-    public void testClickOnSandwich() throws Exception 
-    {
-    	try {
-	System.out.println("Запуск теста testClickOnSandwich");
-    	    } catch (Exception e) {
-    	 	 System.out.println("произошла ошибка при выполнении. Стектрейс: "+  e); 
-    	 	 assertEquals (0,1);
-    		}
-    }        					 
-    
-    @Test
-    public void testCheckPurchaseATicketButton() throws Exception  
-    {
-    
-    mainScreen.mainButtonTap();
-	System.out.println("Запуск теста testCheckPurchaseATicketButton");
-    }
+       					 
 
     @Test
     public void testTextMainButtonRu() throws Exception
     {
-    System.out.println(mainScreen.mainButtonGetText());
+    System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("ru");
-    Assert.assertEquals(mainScreen.mainButtonGetText(), "Купить билет");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Купить билет");
     }
     
     @Test
     public void testTextMainButtonEn() throws Exception
     {
-    System.out.println(mainScreen.mainButtonGetText());
+    System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("en");
-    Assert.assertEquals(mainScreen.mainButtonGetText(), "Purchase a ticket");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Purchase a ticket");
     }
     
     @Test
     public void testTextMainButtonDe() throws Exception
     {
-    System.out.println(mainScreen.mainButtonGetText());
+    System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("de");
-    Assert.assertEquals(mainScreen.mainButtonGetText(), "Das Ticket kaufen");
-    }
-    
-    @Test
-    public void changeLocale() throws Exception 
-    {
-    	System.out.println("Метод смены локализации");
-    	mainScreen.ChangeLocale("de");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Das Ticket kaufen");
     }
 }
