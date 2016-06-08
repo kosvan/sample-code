@@ -50,7 +50,7 @@ public class MainScreenTests extends TestBaseStatic  {
     {
     System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("ru");
-    Assert.assertEquals(mainScreen.mainButton().getText(), "Купить билет");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Найти билет");
     }
     
     @Test
