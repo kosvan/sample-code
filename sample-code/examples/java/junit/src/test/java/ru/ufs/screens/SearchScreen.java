@@ -186,4 +186,26 @@ public WebElement calendarModalLabel() {
 	return this.calendarModalLabel;
 }
 
+//выбор пассажиров
+private WebElement countPassagersLabel;
+public WebElement countPassagersLabel() {
+	countPassagersLabel = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAStaticText[6]"));
+	return this.countPassagersLabel;
+}
+
+private WebElement cancelPassagersModalButton;
+public WebElement cancelPassagersModalButton() {
+	cancelPassagersModalButton = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[3]/UIAButton[1]"));
+	return this.cancelPassagersModalButton;
+}
+
+private WebElement cancelPassagersModalLabel;
+public WebElement cancelPassagersModalLabel() {
+	cancelPassagersModalLabel = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[3]/UIAStaticText[1]"));
+	return this.cancelPassagersModalLabel;
+}
+
+
+
+
 }

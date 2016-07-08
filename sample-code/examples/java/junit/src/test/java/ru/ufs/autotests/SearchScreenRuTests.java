@@ -109,4 +109,12 @@ public class SearchScreenRuTests extends TestBaseStatic {
 		Assert.assertEquals(searchScreen.calendarModalLabel().getText(), "Дата отправления");
 		searchScreen.cancelModalButton().click();
 	}
+	
+	@Test
+	public void checkPassagersView () throws Exception {
+		searchScreen.countPassagersLabel().click();
+		Assert.assertEquals(searchScreen.cancelPassagersModalLabel().getText(), "Пассажиры");
+		searchScreen.cancelPassagersModalButton().click();
+	}
+	
 }
