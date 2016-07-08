@@ -142,7 +142,15 @@ public WebElement timeLabel() {
 	return this.timeLabel;
 }
 
-//
+
+private WebElement cancelLabelModal;
+public WebElement cancelLabelModal() {
+	cancelLabelModal = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIANavigationBar[2]/UIAButton[1]"));
+	return this.cancelLabelModal;
+}
+
+
+
 private WebElement timeDiapasone;
 public WebElement timeDiapasone() {
 	timeDiapasone = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAStaticText[8]"));
@@ -150,8 +158,32 @@ public WebElement timeDiapasone() {
 }
 
 
+//модальные окна
+private WebElement searchStationModalLabel;
+public WebElement searchStationModalLabel() {
+	searchStationModalLabel = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIASearchBar[1]/UIASearchBar[1]"));
+	return this.searchStationModalLabel;
+}
+
+private WebElement stationModalLaber;
+public WebElement stationModalLaber() {
+	stationModalLaber = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIATableView[1]/UIATableGroup[1]/UIAStaticText[1]"));
+	return this.stationModalLaber;
+}
+
+private WebElement cancelModalButton;
+public WebElement cancelModalButton() {
+	cancelModalButton = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[1]"));
+	return this.cancelModalButton;
+}
 
 
+//календарь
 
+private WebElement calendarModalLabel;
+public WebElement calendarModalLabel() {
+	calendarModalLabel = driver.findElement(By.xpath("//UIAApplication[1]/UIAWindow[1]/UIAStaticText[1]"));
+	return this.calendarModalLabel;
+}
 
 }

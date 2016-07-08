@@ -45,7 +45,7 @@ public class SearchScreenRuTests extends TestBaseStatic {
 	
 	@Test
 	public void checkDateTitle () throws Exception {
-    	Assert.assertEquals(searchScreen.dateTitle().getText(), "Сегодня, 07 июля, чт");
+    	Assert.assertEquals(searchScreen.dateTitle().getText(), "Сегодня, 08 июля, пт");
 	}
 	
 	@Test
@@ -80,10 +80,33 @@ public class SearchScreenRuTests extends TestBaseStatic {
 	@Test
 	public void checkTimeSelectorBar () throws Exception {
 		searchScreen.timeDiapasone().click();
-		String timeLabel = searchScreen.timeLabel().getText();
-		Assert.assertEquals(timeLabel, "Время");
+		Assert.assertEquals(searchScreen.timeLabel().getText(), "Время");
+		searchScreen.cancelModalButton().click();
 	}
 	
+	@Test
+	public void checkModalViewFrom () throws Exception {
+		searchScreen.fromStationTitle().click();
+		Assert.assertEquals(searchScreen.searchStationModalLabel().getText(), "Откуда");
+		Assert.assertEquals(searchScreen.stationModalLaber().getText(), "СТАНЦИЯ ОТПРАВЛЕНИЯ");
+		Assert.assertEquals(searchScreen.cancelModalButton().getText(), "Отмена");
+		searchScreen.cancelModalButton().click();
 	
+	}
 	
+	@Test
+	public void checkModalViewWere () throws Exception {
+		searchScreen.wereStationTitle().click();
+		Assert.assertEquals(searchScreen.searchStationModalLabel().getText(), "Куда");
+		Assert.assertEquals(searchScreen.stationModalLaber().getText(), "СТАНЦИЯ НАЗНАЧЕНИЯ");
+		Assert.assertEquals(searchScreen.cancelModalButton().getText(), "Отмена");
+		searchScreen.cancelModalButton().click();
+	}
+
+	@Test
+	public void checkCalendalView () throws Exception {
+		searchScreen.dateTitle().click();
+		Assert.assertEquals(searchScreen.calendarModalLabel().getText(), "Дата отправления");
+		searchScreen.cancelModalButton().click();
+	}
 }
