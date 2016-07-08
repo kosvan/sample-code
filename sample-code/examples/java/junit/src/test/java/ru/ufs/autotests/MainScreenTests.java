@@ -31,26 +31,20 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import ru.ufs.autotests.base.TestBaseStatic;
 import ru.ufs.screens.*;
 
 public class MainScreenTests extends TestBaseStatic  {
 	
-	Screen mainScreen = new Screen(driver);
-	
-    @Test
-    public void test1 () throws Exception 
-    {  	   
-    		
-    }
-    
-       					 
+	MainScreen mainScreen = new MainScreen(driver);
 
     @Test
     public void testTextMainButtonRu() throws Exception
     {
     System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("ru");
-    Assert.assertEquals(mainScreen.mainButton().getText(), "Найти билет");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Найти билет");
+    
     }
     
     @Test
@@ -58,7 +52,7 @@ public class MainScreenTests extends TestBaseStatic  {
     {
     System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("en");
-    Assert.assertEquals(mainScreen.mainButton().getText(), "Purchase a ticket");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Find a ticket");
     }
     
     @Test
@@ -66,6 +60,8 @@ public class MainScreenTests extends TestBaseStatic  {
     {
     System.out.println(mainScreen.mainButton().getText());
     mainScreen.ChangeLocale("de");
-    Assert.assertEquals(mainScreen.mainButton().getText(), "Das Ticket kaufen");
+    Assert.assertEquals(mainScreen.mainButton().getText(), "Fahrkarte suchen");
     }
+    
+    
 }

@@ -1,4 +1,4 @@
-package ru.ufs.autotests;
+package ru.ufs.autotests.base;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
