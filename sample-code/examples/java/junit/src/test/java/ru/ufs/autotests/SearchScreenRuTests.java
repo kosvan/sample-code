@@ -81,7 +81,7 @@ public class SearchScreenRuTests extends TestBaseStatic {
 	public void checkTimeSelectorBar () throws Exception {
 		searchScreen.timeDiapasone().click();
 		Assert.assertEquals(searchScreen.timeLabel().getText(), "Время");
-		searchScreen.cancelModalButton().click();
+		searchScreen.cancelLabelModal().click();
 	}
 	
 	@Test
